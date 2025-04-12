@@ -34,7 +34,7 @@ main {
 }
 
 
-main .about h1 {
+ h1 {
     padding: 15px 0;
     margin: 10px 0;
     text-align: center;
