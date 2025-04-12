@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: #424530;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+   
+}
+
+main .about h1 {
+    padding: 15px 0;
+    margin: 10px 0;
+    text-align: center;
+    color: rgb(45, 78, 67);
+    font-size: 2rem;
+}
+
+main .about p {
+    padding: 10px 0;
+    margin: 15px 0;
+    line-height: 1.6;
+    color: rgb(45, 78, 67);
+    text-align: center;
+}
+
+main .container #sec {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+main .container #sec .do {
+    border: 2px solid #424530;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 4px 4px #b0b886;
+    background-color: #fcfcfc;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    width: calc(25% - 20px);
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container #sec .do:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px #a0a876;
+}
+
+.container #sec button {
+    width: 100px;
+    height: 40px;
+    margin: 15px 0;
+    border: none;
+    background-color: #dfc967;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.container #sec button:hover {
+    background-color: rgb(235, 158, 15);
+}
+
+.container #sec .do .icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1200px) {
+    main .container #sec .do {
+        width: calc(33% - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    main .container #sec .do {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    img {
+        max-width: 200px;
+    }
+    
+    main .container #sec .do {
+        width: 80%;
+        margin: 10px auto;
+    }
+    
+    main .about h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    img {
+        max-width: 180px;
+    }
+    
+    main .container #sec .do {
+        width: 90%;
+    }
+    
+    main .about h1 {
+        font-size: 1.6rem;
+    }
+    
+    main .about p {
+        font-size: 0.9rem;
+    }
+    
+    .container #sec button {
+        width: 90px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    img {
+        max-width: 150px;
+    }
+    
+    main .container #sec .do {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .container #sec button {
+        width: 80px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+}

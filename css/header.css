@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+ 
+}
+
+a {
+    text-decoration: none;
+    color: #424530;
+}
+
+.navbar {
+
+    background-color: #e9f1bb;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 90px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    padding: 20px;
+}
+
+.navbar ul li a {
+    font-weight: bolder;
+}
+
+.navbar ul li a:hover {
+    color: rgb(155, 53, 53);
+}
+
+.navbar ul li:hover {
+    background-color: white;
+}
+
+.navbar #logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.search {
+    width: 450px;
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid #ceb5b5;
+}
+
+.navbar input {
+    border: none;
+    background: transparent;
+    flex: 1;
+    padding: 2px;
+    outline: none;
+}
+
+.navbar button {
+    border-radius: 50%;
+    border: none;
+}
+
+.search i:hover {
+    color: #ff9200;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    background: #e9f1bb;
+    margin-top: 20px;
+    margin-left: -30px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li:hover .menu {
+    display: block;
+}
+
+.navbar ul li:hover .menu ul {
+    display: block;
+}
+
+.navbar ul li:hover .menu ul li {
+    width: 115px;
+    padding: 13px;
+    border-bottom: 2px solid #ccc;
+}
+
+  
+/* Media Queries للتكيف مع أحجام الشاشات */
+
+/* لأجهزة اللاب توب والصغيرة (1024px فأقل) */
+@media (max-width: 1024px) {
+    .navbar {
+        gap: 50px;
+    }
+    
+    .search {
+        width: 350px;
+    }
+}
+
+/* لأجهزة الأيباد والتابلت (768px فأقل) */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 0 20px;
+        gap: 20px;
+    }
+    
+    .search {
+        width: 250px;
+        margin: 10px;
+    }
+    
+    .navbar ul li {
+        padding: 15px 10px;
+    }
+}
+
+/* للهواتف الذكية (600px فأقل) */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .search {
+        width: 90%;
+        order: 3;
+        margin: 10px 0;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .navbar ul li:hover .menu {
+        position: static;
+        margin: 0;
+        width: 100%;
+    }
+    
+    .navbar ul li:hover .menu ul li {
+        width: 100%;
+    }
+    
+    #logo {
+        margin-bottom: 10px;
+    }
+}
+
+/* للهواتف الصغيرة (400px فأقل) */
+@media (max-width: 400px) {
+    .navbar {
+        gap: 10px;
+    }
+    
+    .search {
+        padding: 8px;
+    }
+    
+    .navbar input {
+        font-size: 14px;
+    }
+}

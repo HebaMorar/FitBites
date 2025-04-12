@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+ 
+}
+.navbar2 {
+  background-color: #ffffff; 
+    padding: 10px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.navbar2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar2 li {
+  display: inline;
+}
+
+.navbar2 a {
+  text-decoration: none;
+  color: #424530;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar2 a:hover {
+  background-color: #f0a000; 
+  color: white;
+  transform: scale(1.05);
+}
+
+a {
+  text-decoration: none; 
+  color: #424530;
+}
+
+.container {
+ padding: 20px;
+  max-width: 2000px;
+  margin: auto;
+  direction: rtl;
+ 
+}
+
+.courses, .articles,.books,.workshops {
+  margin-top: 40px;
+}
+
+.course, .article,.book,.workshop {
+  display: flex;
+  flex-wrap:wrap;
+  gap: 20px;
+  
+  justify-content: center;
+}
+
+.coursecard, .articlecard,.bookcard,.workshopcard {
+  background-color: white;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+ 
+  transition: transform 0.3s ease;
+
+}
+
+.coursecard:hover, .articlecard:hover ,.bookcard:hover,.workshopcard:hover{
+  transform: translateY(-5px);
+}
+
+.articlecard img, .coursecard img ,.bookcard img{
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.coursecard img {
+  height: 400px;
+}
+
+.con {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+ h2 {
+  margin: 0 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  color: #595f34;
+}
+.cart i {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.con p {
+  font-size: large;
+  color: #5b5f41;
+  line-height: 1.6;
+}
+
+.معلومات {
+  background-color: #f4b400;
+  padding: 10px 60px;
+  margin: 10px 0;
+  border-radius: 30px;
+  font-size: larger;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: 2px solid #f4b400;
+}
+.معلومات:hover {
+  background-color: #f0a000;
+  transform: scale(1.05);
+}
+
+
+.cart {
+  padding: 12px;
+  border-radius: 30px;
+ 
+  transition: background-color 0.3s ease, transform 0.3s ease;
+ 
+  background-color: #88e476;
+  border: none;
+  padding: 10px 60px;
+   border-radius: 25px;
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.cart:hover {
+  background-color: #4caf50;
+  transform: scale(1.05);
+}
+
+
+
+
+
+@media (max-width: 992px) {
+  .navbar2 ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .course, .article, .book,.workshop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+ 
+
+  .container {
+    padding: 10px;
+  }
+
+  .coursecard, .articlecard, .bookcard {
+    width: 90%;
+  }
+
+  .معلومات, .cart {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: x-large;
+  }
+
+  .معلومات {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .cart {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+ .con {
+    padding: 15px;
+  }
+}

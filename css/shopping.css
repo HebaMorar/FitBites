@@ -1,0 +1,243 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0 ;
+
+}
+.navbar2 {
+  background-color: #ffffff; 
+    padding: 10px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.navbar2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar2 li {
+  display: inline;
+}
+
+.navbar2 a {
+  text-decoration: none;
+  color: #424530;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar2 a:hover {
+  background-color: #f0a000; 
+  color: white;
+  transform: scale(1.05);
+}
+
+a {
+  text-decoration: none; 
+  color: #424530;
+}
+
+h2 {
+  text-align: center;
+  color: #2b2b2b;
+  margin-top: 40px;
+  font-size: 28px;
+}
+
+section {
+  margin-bottom: 50px;
+  direction: rtl;
+}
+
+
+.con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.item {
+   border-radius: 16px;
+  padding: 20px;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+}
+
+.item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.item h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.item p {
+  color: #555;
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.item .price {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+button.add-to-cart {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+button.add-to-cart:hover {
+  background-color: #219150;
+}
+#filter-food-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  width: fit-content;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Cairo', sans-serif;
+
+}
+
+#filter-food-container label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+  color: #333;
+  font-weight: bold;
+ 
+}
+
+#filter-food {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  transition: 0.3s;
+  width: 250px;
+  cursor: pointer;
+  appearance: none;
+ 
+
+}
+
+#filter-food:hover {
+  border-color: #aaa;
+}
+
+#filter-food:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 3px #4CAF50;
+}
+
+#filter-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#filter-btn:hover {
+  background-color: #388e3c;
+}
+
+
+/* للهواتف الصغيرة (أقل من 576px) */
+@media (max-width: 575.98px) {
+  .con {
+    gap: 15px;
+    padding: 0 10px;
+  }
+  
+  .item {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+  }
+  
+  .item img {
+    height: 160px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  
+  button.add-to-cart {
+    padding: 8px 16px;
+  }
+}
+
+/* للهواتف الكبيرة (من 576px إلى 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .con {
+    gap: 20px;
+  }
+  
+  .item {
+    width: calc(50% - 20px);
+    max-width: 280px;
+  }
+}
+
+/* للأجهزة اللوحية (من 768px إلى 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .item {
+    width: calc(33.333% - 20px);
+    max-width: 260px;
+  }
+}
+
+/* للشاشات المتوسطة (من 992px إلى 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .item {
+    width: calc(25% - 20px);
+  }
+}
+
+/* للشاشات الكبيرة (1200px فأكثر) */
+@media (min-width: 1200px) {
+  .item {
+    width: calc(20% - 20px);
+  }
+}

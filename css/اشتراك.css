@@ -1,0 +1,149 @@
+body {
+  
+  margin: 0;
+  padding: 0;
+ 
+}
+
+main {
+  direction: rtl;
+  padding: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+.con{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+h2 {
+  text-align: center;
+  color: #2e8b57;
+  margin-bottom: 20px;
+}
+
+.plan-card {
+  background-color: #fff;
+  border: 2px solid #dcdcdc;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+
+}
+
+.plan-card:hover {
+  border-color: #2e8b57;
+  box-shadow: 0 6px 12px rgba(46, 139, 87, 0.15);
+}
+
+.plan-card h3 {
+  margin-top: 0;
+  color: #2e8b57;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan-card li {
+  margin-bottom: 10px;
+  font-size:medium;
+}
+
+.plan-card button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 12px;
+  background-color: #015224;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.plan-card button:hover {
+  background-color: #246b45;
+}
+
+
+@media (max-width: 767.98px) {
+  .plan-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .plan-card li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .plan-card a {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* تحسينات للهواتف الأفقية */
+@media (max-height: 450px) and (orientation: landscape) {
+  .plan-card {
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .plan-card a {
+    margin-top: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+/* تحسينات للشاشات عالية الدقة */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+  .plan-card {
+    border-width: 1.5px;
+  }
+}
+
+/* تحسينات للطباعة */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  .plan-card {
+    border: 1px solid #ddd;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+  
+  .plan-card a {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222;
+    color: #eee;
+  }
+  
+  .plan-card {
+    background-color: #333;
+    border-color: #444;
+    color: #eee;
+  }
+  
+  .plan-card h3 {
+    color: #4CAF50;
+  }
+  
+  .plan-card:hover {
+    border-color: #4CAF50;
+  }
+}

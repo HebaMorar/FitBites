@@ -1,0 +1,398 @@
+body{height: 100vh;
+
+font-family: Arial, sans-serif;
+
+}
+/*main welcome*/
+main {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    direction: rtl;
+   
+}
+
+main .apple img {
+    max-width: 900px;
+    
+   
+}
+
+main .welcome {
+    max-width: 500px;
+    text-align: right;
+    font-family: "Lateef", serif;
+    direction: rtl;
+    color: #333;
+    margin-top:90px;
+    
+  
+}
+
+.button {
+    margin-top: 40px;
+}
+
+.button button {
+    background-color: #ff9200;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.button button:hover {
+    background-color: #ffc884;
+}
+
+.welcome {
+    margin-bottom: 50px;
+}
+
+.welcome h2 {
+    font-size: 32px;
+    color: #333;
+}
+
+#welcome p {
+    font-size: 18px;
+    color: #777;
+}
+
+/*الاراء*/
+#tests {
+    padding: 40px;
+   border-radius: 15px;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   margin-top: 40px;
+   direction: rtl;
+   display: flex;
+}
+
+.test {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.test:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.test p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.test h4 {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stars {
+    color: #ff9200;
+    margin-top: 10px;
+}
+
+.stars i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#tests h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+    align-content: center;
+    margin-left: 50px;
+}
+
+#tests h2::after {
+   width: 80px;
+    height: 3px;
+    background-color: #ff9200;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*المقالات*/
+.art #articles{
+    display: flex;
+    justify-content: center;
+}
+#articles {
+    padding: 40px;
+    margin-top: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+   
+
+}
+
+#articles h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+    align-content: center;
+    margin-left: 50px;
+}
+
+#articles h2::after {
+    content: "";
+    width: 100px;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.article {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.article h3 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.article p {
+    font-size: 18px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.article a {
+    font-size: 18px;
+    color: #ff9200;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.article a:hover {
+    color: #ff6b00;
+}
+
+/*الاسئلة*/
+#qua {
+    display: flex;
+    padding: 40px;
+    direction: rtl; 
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.qua-item {
+    
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #ff9200;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out; }
+
+.qua-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.qua-item h4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: right;
+    position: relative;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+   
+    
+   
+}
+
+.faq-item h4::before {
+    position: absolute;
+    right: -20px;
+    top: 0;
+    font-size: 30px;
+    color: #ff9200;
+}
+
+.qua-item p {
+    font-size: 18px;
+    color: #555;
+    text-align: right;
+    line-height: 1.8;
+}
+
+.qua-item a {
+    color: #ff9200;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.qua-item a:hover {
+    text-decoration: underline;
+}
+
+/* للهواتف الصغيرة (أقل من 576px) */
+@media (max-width: 575.98px) {
+    main {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+    }
+    
+    main .apple img {
+        max-width: 100%;
+    }
+    
+    main .welcome {
+        max-width: 100%;
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    
+    .welcome h2 {
+        font-size: 26px;
+    }
+    
+    #welcome p {
+        font-size: 16px;
+    }
+    
+    .button button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+    
+    .footer-container {
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    #tests, #qua {
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    .test, .article, .qua-item {
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 28px;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    #articles {
+        padding: 20px;
+        margin-top: 30px;
+    }
+}
+
+/* للهواتف الكبيرة (من 576px إلى 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    main {
+        gap: 20px;
+    }
+    
+    main .apple img {
+        max-width: 100%;
+    }
+    
+    main .welcome {
+        max-width: 100%;
+    }
+    
+    .footer-container {
+        padding: 30px;
+    }
+    
+    #tests, #qua {
+        padding: 30px;
+    }
+}
+
+/* للأجهزة اللوحية (من 768px إلى 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    main .apple img {
+        max-width: 600px;
+    }
+    
+    main .welcome {
+        max-width: 400px;
+    }
+    
+    .footer-container {
+        gap: 20px;
+    }
+    
+    .footer-container .footer-about,
+    .footer-container .footer-links,
+    .footer-container .footer-contact,
+    .footer-container .footer-social {
+        min-width: 200px;
+    }
+}
+
+/* للشاشات المتوسطة (من 992px إلى 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    main .apple img {
+        max-width: 700px;
+    }
+    
+    main .welcome {
+        max-width: 450px;
+    }
+}
+
+/* للشاشات الكبيرة (1200px فأكثر) */
+@media (min-width: 1200px) {
+    /* الحفاظ على التصميم الأصلي كما هو */
+}
