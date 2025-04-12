@@ -1,54 +1,45 @@
-
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
-const container = document.getElementById("cart-items");
-
-if (cart.length === 0) {
-  container.innerHTML = "<p>السلة فارغة </p>";
-} else {
-  cart.forEach(item => {
-    const div = document.createElement("div");
-    div.innerHTML = `<p><strong>${item.title}</strong> - ${item.price}</p>`;
-    container.appendChild(div);
-  });
-}
-
-
 let cartitems = JSON.parse(localStorage.getItem("cart")) || [];
 
 function updateCart() {
-  const cart = document.getElementById("product");
-  cart.innerHTML = "";
+  const container = document.getElementById("cart-items") || document.getElementById("product");
+  container.innerHTML = "";
 
-  if (cartitems.length > 0) {
-    let total = 0;
-    cartitems.forEach((item, index) => {
-      const cartItemDiv = document.createElement("div");
-      cartItemDiv.classList.add("cart-item");
+  if (cartitems.length === 0) {
+    container.innerHTML = "<p>السلة فارغة 🛒</p>";
+    return;
+  }
 
-      cartItemDiv.innerHTML = `
-        <div>
-          <h3>${item.title}</h3>
-          <span>$${item.price}</span>
-        </div>
-      `;
+  let total = 0;
 
-      const deletebtn = document.createElement("button");
-      deletebtn.innerHTML = '<i class="fa-solid fa-trash"></i>';
-      deletebtn.classList.add("delete-btn");
-      deletebtn.addEventListener("click", () => {
-        cartitems.splice(index, 1);
-        localStorage.setItem("cart", JSON.stringify(cartitems));
-        updateCart();
-      });
+  cartitems.forEach((item, index) => {
+    const itemDiv = document.createElement("div");
+    itemDiv.classList.add("cart-item");
 
-      cartItemDiv.appendChild(deletebtn);
-      cart.appendChild(cartItemDiv);
+    itemDiv.innerHTML = `
+      <div>
+        <h3>${item.title}</h3>
+        <span>$${item.price}</span>
+      </div>
+    `;
 
-      total += parseFloat(item.price);
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    deleteBtn.classList.add("delete-btn");
+    deleteBtn.addEventListener("click", () => {
+      cartitems.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cartitems));
+      updateCart();
     });
 
-    const totalcart = document.createElement("div");
-    totalcart.style.cssText = `
+    itemDiv.appendChild(deleteBtn);
+    container.appendChild(itemDiv);
+
+    total += parseFloat(item.price);
+  });
+
+  if (container.id === "product") {
+    const totalDiv = document.createElement("div");
+    totalDiv.style.cssText = `
       margin-top: 30px;
       padding: 10px;
       border-top: 1px solid #ccc;
@@ -59,23 +50,25 @@ function updateCart() {
       border-radius: 8px;
       text-align: center;
     `;
-    totalcart.innerHTML = `<strong>المجموع: $${total.toFixed(2)}</strong>`;
-    cart.appendChild(totalcart);
-  } else {
-    cart.innerHTML = "<p>عربتك فارغة</p>";
+    totalDiv.innerHTML = `<strong>المجموع: $${total.toFixed(2)}</strong>`;
+    container.appendChild(totalDiv);
   }
 }
 
-// إتمام عملية الشراء
-document.getElementById("btn").addEventListener("click", function () {
-  if (cartitems.length > 0) {
-    alert("إتمام الشراء... شكراً لزيارتك!");
-    cartitems = [];
-    localStorage.removeItem("cart");
-    updateCart();
-  } else {
-    alert("عربتك فارغة!");
-  }
-});
+const purchaseBtn = document.getElementById("btn");
+if (purchaseBtn) {
+  purchaseBtn.addEventListener("click", function () {
+    if (cartitems.length > 0) {
+      alert("إتمام الشراء... شكراً لزيارتك!");
+      cartitems = [];
+      localStorage.removeItem("cart");
+      updateCart();
+    } else {
+      alert("عربتك فارغة!");
+    }
+  });
+}
 
 updateCart();
+
+
