@@ -1,3 +1,18 @@
+
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const container = document.getElementById("cart-items");
+
+if (cart.length === 0) {
+  container.innerHTML = "<p>السلة فارغة </p>";
+} else {
+  cart.forEach(item => {
+    const div = document.createElement("div");
+    div.innerHTML = `<p><strong>${item.title}</strong> - ${item.price}</p>`;
+    container.appendChild(div);
+  });
+}
+
+
 let cartitems = JSON.parse(localStorage.getItem("cart")) || [];
 
 function updateCart() {
@@ -51,6 +66,7 @@ function updateCart() {
   }
 }
 
+// إتمام عملية الشراء
 document.getElementById("btn").addEventListener("click", function () {
   if (cartitems.length > 0) {
     alert("إتمام الشراء... شكراً لزيارتك!");
@@ -63,4 +79,3 @@ document.getElementById("btn").addEventListener("click", function () {
 });
 
 updateCart();
-
