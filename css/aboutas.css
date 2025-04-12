@@ -20,14 +20,19 @@ main {
     padding: 20px;
 }
 
-img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    aspect-ratio: 1/1;
-    border-radius: 10px;
-   
+#sec img {
+  width: 180px;        
+  height: 180px;      
+  object-fit: cover;   
+  border-radius: 50%;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
+
+#sec img:hover {
+  transform: scale(1.05);
+}
+
 
 main .about h1 {
     padding: 15px 0;
