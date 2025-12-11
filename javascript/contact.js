@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const message = document.getElementById("message").value;
         const branch = document.getElementById("branch").value;
         const title = message.substring(0, 400); 
-            emailjs.send("service_d14oqff", "template_q1s8qp7", {
+            emailjs.send("service_l1uin7d", "template_q1s8qp7", {
             email: email,
             name: name,
             message: message,
@@ -24,4 +24,5 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     });
 });
+
 
