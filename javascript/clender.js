@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //emailjs
-        emailjs.send("service_od0jgqx", "template_cdavjpm", {
+        emailjs.send("service_od0jgqx", "template_ve0vtyq", {
             name: userName,
             typeCon: selectedType,
             specialist: chosenDoctor,
@@ -142,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     clearButtonStyles();
 });
+
 
 
 
