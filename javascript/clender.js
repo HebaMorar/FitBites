@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let selectedDate ;
     let selectedTime ;
 
-    emailjs.init("It-sbHLw6ZlCW49EV");
+    emailjs.init("_koR825wVciwcFfwh");
 
     function clearButtonStyles() {
         [...clinicButtons, ...zoomButtons, ...dateButtons].forEach(btn => {
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //emailjs
-        emailjs.send("service_l1uin7d", "template_jrrodi9", {
+        emailjs.send("service_od0jgqx", "template_cdavjpm", {
             name: userName,
             typeCon: selectedType,
             specialist: chosenDoctor,
@@ -142,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     clearButtonStyles();
 });
+
 
 
 
