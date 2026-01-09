@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function() {
         const message = document.getElementById("message").value;
         const branch = document.getElementById("branch").value;
         const title = message.substring(0, 400); 
-            emailjs.send("service_l1uin7d", "template_q1s8qp7", {
+            emailjs.send("service_od0jgqx", "template_ve0vtyq", {
             email: email,
             name: name,
             message: message,
             branch: branch,
             title: title 
-        }, "FfTY43HT2F--Y2oJI")
+        }, "_koR825wVciwcFfwh")
         .then(response => {
             alert("تم إرسال رسالتك بنجاح");
              })
@@ -24,5 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     });
 });
+
 
 
