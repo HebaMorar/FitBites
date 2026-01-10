@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if ((type === "زوم" && btn.classList.contains("zoom")) ||
                 (type === "عيادة" && btn.classList.contains("in-person"))) {
                     btn.style.backgroundColor = "#388e3c" ;
-                    btn.style.color = "balck";
+                    btn.style.color = "black";
                 btn.style.fontWeight = "bold";
                 btn.style.borderRadius = "10px";
             }
@@ -142,11 +142,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     clearButtonStyles();
 });
-
-
-
-
-
-
-
 
